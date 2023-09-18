@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "myproject"
+version = "0.1.0"
+description = "This project is test project ."
+authors = ["Anonymous <anonymous@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11.5"
+pydantic = "^2.3.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+ruff = "^0.0.290"
+mypy = "^1.5.1"
+pytest = "^7.4.2"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+select = ["B", "E", "F", "I", "N", "W", "YTT", "PL"]
+
+[tool.black]
+target-version = ["py311"]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

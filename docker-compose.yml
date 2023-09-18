@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  app:
+    container_name: python
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
+    tty: true
+    volumes:
+      - ./app:/app
+      - /app/.venv
+      - /app/.pytest_cache
+      - /app/.ruff_cache
